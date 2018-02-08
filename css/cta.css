@@ -1,0 +1,12 @@
+.cta_inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.cta-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

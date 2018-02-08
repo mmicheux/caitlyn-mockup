@@ -1,0 +1,24 @@
+@import url('header.css');
+@import url('main.css');
+@import url('footer.css');
+
+
+*{
+  /* border: 1px solid blue; */
+}
+
+body{
+  background:white;
+  margin: 0;
+}
+ /* container-wide */
+.container{
+  width: 100%;
+  /* max-width: 900px; */
+  margin: 0 auto;
+}
+.container__section{
+  display: block;
+  width: 100%;
+  /* min-height: 200px; */
+}
