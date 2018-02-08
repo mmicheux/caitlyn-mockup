@@ -1,0 +1,19 @@
+{
+  "name": "caitlyn-mockup",
+  "version": "1.0.0",
+  "description": "This is the webpage version of a mockup that my friend made. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/underwood3mb/caitlyn-mockup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/underwood3mb/caitlyn-mockup/issues"
+  },
+  "homepage": "https://github.com/underwood3mb/caitlyn-mockup#readme"
+}
