@@ -1,21 +1,24 @@
+@mixin max-width(){
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
+@import 'lib/bem';
+@import 'lib/color-variables';
 @import 'header';
 @import 'main';
 @import 'footer';
 
 
-*{
-  /* border: 1px solid blue; */
-}
 
 body{
-  background:white;
   margin: 0;
+  font-family: 'Montserrat', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
  /* container-wide */
 .container{
   width: 100%;
-  /* max-width: 900px; */
-  margin: 0 auto;
 }
 .container__section{
   display: block;

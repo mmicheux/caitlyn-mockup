@@ -1,0 +1,76 @@
+/// .spend
+@include block('spend'){
+  background-color: $teal-6;
+
+
+  @include child('inner'){
+    @include max-width();
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  @include child('title'){
+    text-transform: uppercase;
+    color: $white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    margin-top: 0;
+    word-spacing: 8px;
+  }
+
+  @include child('list'){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+  }
+
+  @include child('item'){
+    list-style: none;
+    margin: 0 7px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:200px;
+    height:175px;
+    color: $teal-6;
+
+    &#five{
+      background-color: $yellow-1;
+    }
+
+    &#ten{
+      background-color: $yellow-2;
+    }
+    &#twenty-five{
+      background-color: $yellow-3;
+    }
+    p{
+      margin:0;
+      position: relative;
+    }
+    @include modifier('text-top'){
+      width: 60%;
+      top: 5px;
+      line-height: 12px;
+    }
+    @include modifier('text-middle'){
+      font-size: 70px;
+      margin: 0;
+    }
+    @include modifier('text-bottom'){
+      top: -10px;
+    }
+
+  }
+
+  @include child('bold'){
+    font-weight: bold;
+  }
+
+
+}

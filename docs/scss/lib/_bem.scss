@@ -1,0 +1,20 @@
+/// Block element
+@mixin block($element){
+  .#{$element}{
+    @content;
+  }
+}
+
+/// Child Element
+@mixin child($element) {
+  &__#{$element} {
+      @content;
+  }
+}
+
+/// Modifier
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+      @content;
+  }
+}

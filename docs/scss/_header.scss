@@ -1,10 +1,10 @@
-.header{
-  .header__upper{
+@include block('header'){
+  @include child('upper'){
     min-height: 75px;
-    background-color:#2ca0b0;
+    background-color: $teal-5;
   }
-  .header__lower{
+  @include child(lower){
     min-height:50px;
-    background-color: #125056;
+    background-color: $teal-6;
   }
 }

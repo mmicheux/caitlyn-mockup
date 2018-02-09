@@ -1,8 +1,9 @@
-.header .header__upper {
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900");
+.header__upper {
   min-height: 75px;
   background-color: #2ca0b0; }
 
-.header .header__lower {
+.header__lower {
   min-height: 50px;
   background-color: #125056; }
 
@@ -17,19 +18,68 @@
   align-items: center;
   justify-content: center; }
 
-/* main */
-* {
-  /* border: 1px solid blue; */ }
+.spend {
+  background-color: #125056; }
+  .spend__inner {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center; }
+  .spend__title {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    margin-top: 0;
+    word-spacing: 8px; }
+  .spend__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 0; }
+  .spend__item {
+    list-style: none;
+    margin: 0 7px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 175px;
+    color: #125056; }
+    .spend__item#five {
+      background-color: #FDDD98; }
+    .spend__item#ten {
+      background-color: #FABD27; }
+    .spend__item#twenty-five {
+      background-color: #F9A400; }
+    .spend__item p {
+      margin: 0;
+      position: relative; }
+    .spend__item--text-top {
+      width: 60%;
+      top: 5px;
+      line-height: 12px; }
+    .spend__item--text-middle {
+      font-size: 70px;
+      margin: 0; }
+    .spend__item--text-bottom {
+      top: -10px; }
+  .spend__bold {
+    font-weight: bold; }
 
+/* main */
 body {
-  background: white;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Montserrat', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
 
 /* container-wide */
 .container {
-  width: 100%;
-  /* max-width: 900px; */
-  margin: 0 auto; }
+  width: 100%; }
 
 .container__section {
   display: block;
