@@ -1,0 +1,72 @@
+@include block('reward'){
+  background-color: $grey-light;
+
+  @include child('inner'){
+    @include max-width();
+    text-align: center;
+  }
+
+  @include child('title'){
+    @include title-style();
+  }
+  @include child('tiers'){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    @include media($bp-md){
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+  }
+  @include child('tier'){
+    list-style: none;
+  }
+
+  @include child('medal'){
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &#bronze{
+      background-color: $bronze;
+    }
+
+    &#silver{
+      background-color: $silver;
+    }
+
+    &#gold{
+      background-color: $gold;
+    }
+
+    &#platinum{
+      background-color: $platinum-2;
+      border: 2px solid $white;
+
+      .reward__medal-text{
+        color: $white;
+        background-color: $platinum-1;
+      }
+
+    }
+
+    
+
+  }
+  @include child('medal-text'){
+    border: 2px solid $white;
+    padding: 2px 6px;
+    color: $white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+}

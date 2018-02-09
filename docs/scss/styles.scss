@@ -1,8 +1,10 @@
-@mixin max-width(){
-  max-width: 900px;
-  margin: 0 auto;
-  width: 100%;
+@mixin title-style(){
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  word-spacing: 8px;
+  font-weight: bold;
 }
+@import 'lib/breakpoints';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
 @import 'lib/bem';
 @import 'lib/color-variables';
@@ -24,4 +26,7 @@ body{
   display: block;
   width: 100%;
   /* min-height: 200px; */
+}
+ul{
+  padding:0;
 }

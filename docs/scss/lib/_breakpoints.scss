@@ -1,0 +1,49 @@
+
+
+$grid-breakpoints: (
+  xxxs: rem(0),
+  // Extra Extra small screen / phone of yesteryear
+  xxs: '320px',
+  // Extra small screen / phone
+  xs: '448px',
+  // Small screen / phone
+  sm: '544px',
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: '992px',
+  // Extra large screen / wide desktop
+  xl: '1200px',
+  // Extra Extra large screen
+  xxl: '1400px'
+);
+
+@function bp($bp) {
+  @return map-get($grid-breakpoints, $bp);
+}
+
+$bp-xxxs: bp(xxxs) !default;
+$bp-xxs: bp(xxs) !default;
+$bp-xs: bp(xs) !default; // 28em
+$bp-sm: bp(sm) !default; // 34em
+$bp-md: bp(md) !default; // 48em
+$bp-lg: bp(lg) !default; // 62em
+$bp-xl: bp(xl) !default; // 75em
+$bp-xxl: bp(xxl) !default;
+
+// This breakpoint represent the inflection point between the touch menu (hamburger menu) and the full "desktop" rendition:
+// Please try to not use this for anything other than touch/full navigation menu concerns.
+$bp-nav-full: 768px !default;
+
+
+@mixin media($size){
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+@mixin max-width(){
+  max-width: 900px;
+  margin: 0 auto;
+  // width: 100%;
+  padding: 30px;
+}

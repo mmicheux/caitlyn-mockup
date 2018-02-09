@@ -10,25 +10,30 @@
   }
 
   @include child('title'){
-    text-transform: uppercase;
+    @include title-style();
     color: $white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 32px;
     margin-top: 0;
-    word-spacing: 8px;
   }
 
   @include child('list'){
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     padding: 0;
+
+    @include media($bp-md){
+      flex-direction: row;
+    }
+
   }
+
+  
 
   @include child('item'){
     list-style: none;
-    margin: 0 7px;
+    margin: 7px auto;
     text-transform: uppercase;
     font-size: 14px;
     display: flex;
@@ -38,6 +43,10 @@
     width:200px;
     height:175px;
     color: $teal-6;
+
+    @include media($bp-md){
+      margin: 0 7px;
+    }
 
     &#five{
       background-color: $yellow-1;

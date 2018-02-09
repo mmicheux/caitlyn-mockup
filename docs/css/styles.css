@@ -18,30 +18,86 @@
   align-items: center;
   justify-content: center; }
 
+.reward {
+  background-color: #EBEBEB; }
+  .reward__inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center; }
+  .reward__title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    word-spacing: 8px;
+    font-weight: bold; }
+  .reward__tiers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap; }
+    @media screen and (min-width: 768px) {
+      .reward__tiers {
+        flex-direction: row;
+        flex-wrap: nowrap; } }
+  .reward__tier {
+    list-style: none; }
+  .reward__medal {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .reward__medal#bronze {
+      background-color: #BE5F4A; }
+    .reward__medal#silver {
+      background-color: #C2C2C2; }
+    .reward__medal#gold {
+      background-color: #E18234; }
+    .reward__medal#platinum {
+      background-color: #DEDEDE;
+      border: 2px solid #FFFFFF; }
+      .reward__medal#platinum .reward__medal-text {
+        color: #FFFFFF;
+        background-color: #636363; }
+  .reward__medal-text {
+    border: 2px solid #FFFFFF;
+    padding: 2px 6px;
+    color: #FFFFFF;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 800; }
+
 .spend {
   background-color: #125056; }
   .spend__inner {
     max-width: 900px;
     margin: 0 auto;
-    width: 100%;
+    padding: 30px;
     padding: 30px 20px;
     text-align: center; }
   .spend__title {
-    text-transform: uppercase;
-    color: #FFFFFF;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    word-spacing: 8px;
+    font-weight: bold;
+    color: #FFFFFF;
     font-size: 32px;
-    margin-top: 0;
-    word-spacing: 8px; }
+    margin-top: 0; }
   .spend__list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     padding: 0; }
+    @media screen and (min-width: 768px) {
+      .spend__list {
+        flex-direction: row; } }
   .spend__item {
     list-style: none;
-    margin: 0 7px;
+    margin: 7px auto;
     text-transform: uppercase;
     font-size: 14px;
     display: flex;
@@ -51,6 +107,9 @@
     width: 200px;
     height: 175px;
     color: #125056; }
+    @media screen and (min-width: 768px) {
+      .spend__item {
+        margin: 0 7px; } }
     .spend__item#five {
       background-color: #FDDD98; }
     .spend__item#ten {
@@ -85,3 +144,6 @@ body {
   display: block;
   width: 100%;
   /* min-height: 200px; */ }
+
+ul {
+  padding: 0; }
