@@ -1,12 +1,55 @@
-.cta_inner {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-}
+@include block('cta'){
+  @include child('inner'){
+    @include max-width();
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: $teal-6;
+  }
+  
+  @include child('text'){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-.cta-text{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include child('title'){
+    @include title-style();
+    font-size: 50px;
+    letter-spacing: -3px;
+    color: $teal-6;
+    margin-bottom:0;
+  }
+
+  @include child('subtitle'){
+    font-weight: 300;
+    font-size: 13px;
+    margin: 0;
+    margin-top: -8px;
+    color: $teal-5;
+  }
+
+  @include child('button'){
+    border: none;
+    background: orange;
+    margin-top: 15px;
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $white;
+  }
+
+  @include child('link-sign-in'){
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0;
+    color: black;
+  }
+
 }
