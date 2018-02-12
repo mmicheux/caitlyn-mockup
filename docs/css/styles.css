@@ -13,7 +13,12 @@
   padding: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
-  background-color: #125056; }
+  background-color: #125056;
+  /* bottom, image */
+  background-image: url(../images/810.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center center; }
 
 .cta__text {
   display: flex;
@@ -31,10 +36,16 @@
   word-spacing: 8px;
   font-weight: bold;
   font-size: 30px;
-  font-size: 50px;
+  font-size: 40px;
   letter-spacing: -3px;
   color: #125056;
-  margin-bottom: 0; }
+  margin-bottom: 10px;
+  line-height: 35px; }
+  @media screen and (min-width: 768px) {
+    .cta__title {
+      font-size: 50px;
+      margin-bottom: 0;
+      line-height: 50px; } }
 
 .cta__subtitle {
   font-weight: 300;
@@ -138,6 +149,126 @@
     max-width: 130px;
     line-height: 10px;
     margin: 0 auto; }
+
+.earn__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 600px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 60px;
+  border: 2px solid #125056;
+  position: relative; }
+
+.earn__title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  word-spacing: 8px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #464646;
+  position: absolute;
+  background-color: #FFFFFF;
+  top: -45px;
+  left: calc(50% - 250px);
+  width: 500px;
+  height: 40px;
+  text-align: center; }
+
+.earn__link {
+  position: absolute;
+  bottom: -19px;
+  left: calc(50% - 150px);
+  text-decoration: none; }
+
+.earn__button {
+  border: none;
+  background: #464646;
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #FFFFFF; }
+
+.earn__section {
+  display: flex;
+  flex-direction: column; }
+
+.earn__refer {
+  background-color: #125056;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center; }
+  .earn__refer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center; }
+    .earn__refer__content img {
+      width: 20px;
+      height: 100%; }
+  .earn__refer__text {
+    display: inline-block;
+    width: 400px;
+    margin: 0 10px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 100;
+    line-height: 14px; }
+    .earn__refer__text__bold {
+      font-weight: 700; }
+  .earn__refer__button {
+    margin-top: 10px; }
+    .earn__refer__button button {
+      background-color: #FFFFFF;
+      color: #82A5A9; }
+
+.earn__circles {
+  margin-top: 10px; }
+
+.earn .ways-to-earn__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0; }
+  .earn .ways-to-earn__list .way-to-earn {
+    list-style: none;
+    flex-basis: 25%;
+    text-align: center;
+    padding: 10px; }
+    .earn .ways-to-earn__list .way-to-earn:first-child {
+      padding-left: 0; }
+    .earn .ways-to-earn__list .way-to-earn:last-child {
+      padding-right: 0; }
+    .earn .ways-to-earn__list .way-to-earn__circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #628D95;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto; }
+    .earn .ways-to-earn__list .way-to-earn__content {
+      font-size: 10px;
+      text-transform: uppercase;
+      width: 100px;
+      margin: 0 auto;
+      color: #125056; }
+      .earn .ways-to-earn__list .way-to-earn__content p {
+        margin: 0;
+        line-height: 10px; }
+    .earn .ways-to-earn__list .way-to-earn__points {
+      font-size: 12px;
+      font-weight: 800;
+      margin-top: 5px !important; }
+    .earn .ways-to-earn__list .way-to-earn__how-to {
+      margin-top: 2px !important;
+      font-weight: 600; }
 
 .spend {
   background-color: #125056; }

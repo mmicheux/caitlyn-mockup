@@ -3,7 +3,13 @@
     @include max-width();
     margin-top: 50px;
     margin-bottom: 50px;
+
     background-color: $teal-6;
+    /* bottom, image */
+    background-image :url(../images/810.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
   }
   
   @include child('text'){
@@ -19,10 +25,17 @@
 
   @include child('title'){
     @include title-style();
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: -3px;
     color: $teal-6;
-    margin-bottom:0;
+    margin-bottom:10px;
+    line-height: 35px;
+
+    @include media($bp-md){
+      font-size: 50px;
+      margin-bottom: 0;
+      line-height: 50px;
+    }
   }
 
   @include child('subtitle'){

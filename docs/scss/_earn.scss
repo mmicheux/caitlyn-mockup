@@ -1,0 +1,150 @@
+@include block('earn'){
+
+  @include child('inner'){
+    @include max-width();
+    max-width: 600px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 60px;
+    border: 2px solid $teal-6;
+    position: relative;
+  }
+
+  @include child('title'){
+    @include title-style();
+    color: $grey-dark;
+    position: absolute;
+    background-color: $white;
+    top: -45px;
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 40px;
+    text-align: center;
+  }
+  @include child('link'){
+    position: absolute;
+    bottom: -19px;
+    left: calc(50% - 150px);
+    text-decoration: none;
+  }
+
+  @include child('button'){
+    border: none;
+    background: $grey-dark;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #FFFFFF;
+  }
+
+  @include child('section'){
+    display: flex;
+    flex-direction: column;
+  }
+  @include child('refer'){
+    background-color: $teal-6;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include child('content'){
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      img{
+        width: 20px;
+        height: 100%;
+      }
+    }
+
+    @include child('text'){
+      display: inline-block;
+      width: 400px;
+      margin: 0 10px;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 100;
+      line-height: 14px;
+
+      @include child('bold'){
+        font-weight: 700;
+      }
+    }
+
+    @include child('button'){
+      margin-top: 10px;
+      button{
+        background-color: $white;
+        color: $teal-2;
+      }
+    }
+  }
+
+  @include child('circles'){
+    margin-top: 10px;
+  }
+  @include block('ways-to-earn__list'){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0;
+
+    @include block('way-to-earn'){
+      list-style: none;
+      flex-basis: 25%;
+      text-align: center;
+      padding: 10px;
+
+      &:first-child{
+        padding-left: 0;
+        .way-to-earn__circle{
+          // margin-left:0;
+        }
+      }
+      &:last-child{
+        padding-right: 0;
+        .way-to-earn__circle{
+          // margin-right:0;
+        }
+      }
+
+      @include child('circle'){
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $teal-3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+      @include child('content'){
+        font-size: 10px;
+        text-transform: uppercase;
+        width: 100px;
+        margin: 0 auto;
+        color: $teal-6;
+
+        p{
+          margin:0;
+          line-height: 10px;
+        }
+      }
+      @include child('points'){
+        font-size: 12px;
+        font-weight: 800;
+        margin-top: 5px !important;
+      }
+      @include child('how-to'){
+        margin-top: 2px !important;
+        font-weight: 600;
+      }
+    }
+  }
+}
