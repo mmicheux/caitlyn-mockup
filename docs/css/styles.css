@@ -25,15 +25,30 @@
     margin: 0 auto;
     padding: 30px;
     text-align: center; }
+  .reward__upper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
   .reward__title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
     word-spacing: 8px;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 25px;
+    color: #464646; }
+    .reward__title__line {
+      display: none;
+      width: 120px;
+      height: 1px;
+      background-color: #c6c6c6; }
+      @media screen and (min-width: 768px) {
+        .reward__title__line {
+          display: block; } }
   .reward__tiers {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
     flex-wrap: wrap; }
     @media screen and (min-width: 768px) {
@@ -41,7 +56,8 @@
         flex-direction: row;
         flex-wrap: nowrap; } }
   .reward__tier {
-    list-style: none; }
+    list-style: none;
+    padding: 0 0 20px; }
   .reward__medal {
     height: 100px;
     width: 100px;
@@ -69,6 +85,17 @@
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 800; }
+  .reward__content {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 0 auto; }
+  .reward__content-title {
+    font-weight: bold;
+    margin-bottom: 0; }
+  .reward__content-description {
+    max-width: 130px;
+    line-height: 10px;
+    margin: 0 auto; }
 
 .spend {
   background-color: #125056; }
@@ -83,6 +110,7 @@
     text-transform: uppercase;
     word-spacing: 8px;
     font-weight: bold;
+    font-size: 30px;
     color: #FFFFFF;
     font-size: 32px;
     margin-top: 0; }

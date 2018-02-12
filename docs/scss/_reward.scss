@@ -6,13 +6,33 @@
     text-align: center;
   }
 
+  @include child('upper'){
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
   @include child('title'){
     @include title-style();
+    line-height:25px;
+    color:$grey-dark;
+
+    @include child('line'){
+      display: none;
+      width:120px;
+      height:1px;
+      background-color: lighten($grey-dark, 50%);
+
+      @include media($bp-md){
+        display: block;
+      }
+    }
   }
+
   @include child('tiers'){
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
     flex-wrap: wrap;
 
@@ -24,6 +44,7 @@
   }
   @include child('tier'){
     list-style: none;
+    padding: 0 0 20px ;
   }
 
   @include child('medal'){
@@ -57,10 +78,8 @@
       }
 
     }
-
-    
-
   }
+
   @include child('medal-text'){
     border: 2px solid $white;
     padding: 2px 6px;
@@ -68,5 +87,21 @@
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 800;
+  }
+
+  @include child('content'){
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+
+  @include child('content-title'){
+    font-weight:bold;
+    margin-bottom: 0;
+  }
+  @include child('content-description'){
+    max-width: 130px;
+    line-height: 10px;
+    margin: 0 auto;
   }
 }
