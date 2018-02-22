@@ -1,0 +1,83 @@
+@include block('header'){
+  @include child('upper'){
+    background-color: $teal-5;
+    padding: 10px;
+  }
+
+  @include child('upper-bottom'){
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    .header{
+      @include child('menu'){
+        flex-basis: 60%;
+        @include block('main-nav'){
+          display: flex;
+          flex-direction: row;
+          
+          @include child('top-level'){
+            list-style: none;
+            padding: 10px 20px;
+            display: inline-block;
+            &:first-child{
+              padding-left: 0;
+            }
+            &:last-child{
+              padding-right: 0;
+            }
+
+            @include child('link'){
+              display: inline-block;
+              text-decoration: none;
+              color: $white;
+              text-transform: uppercase;
+              font-size: 12px;
+            }
+          }
+          @include child('top-level-icon'){
+            svg{
+              height: 12px;
+              path{
+                fill: $white;
+              }
+            }
+            
+          }
+
+        }
+      }
+      
+      @include child('order-buttons'){
+        flex-basis: 40%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include child('reorder'){
+        color: $white;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: $teal-4;
+        padding: 6px 10px;
+        margin-right: 10px;
+
+        @include child('icon'){
+          display:inline-block;
+        }
+        @include child('text'){
+          display:inline-block;
+        }
+      }
+      @include child('free-shipping'){
+        color: $white;
+          font-size: 12px;
+          text-transform: uppercase;
+          text-decoration: none;
+          background: $yellow-3;
+          padding: 6px 10px;
+      }
+    }
+
+  }
+  
+}

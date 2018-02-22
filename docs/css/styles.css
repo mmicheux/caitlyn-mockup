@@ -1,11 +1,79 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900");
 .header__upper {
-  min-height: 75px;
-  background-color: #2ca0b0; }
+  background-color: #2ca0b0;
+  padding: 10px; }
+
+.header__upper-bottom {
+  display: flex;
+  align-items: center;
+  padding-top: 10px; }
+  .header__upper-bottom .header__menu {
+    flex-basis: 60%; }
+    .header__upper-bottom .header__menu .main-nav {
+      display: flex;
+      flex-direction: row; }
+      .header__upper-bottom .header__menu .main-nav__top-level {
+        list-style: none;
+        padding: 10px 20px;
+        display: inline-block; }
+        .header__upper-bottom .header__menu .main-nav__top-level:first-child {
+          padding-left: 0; }
+        .header__upper-bottom .header__menu .main-nav__top-level:last-child {
+          padding-right: 0; }
+        .header__upper-bottom .header__menu .main-nav__top-level__link {
+          display: inline-block;
+          text-decoration: none;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          font-size: 12px; }
+      .header__upper-bottom .header__menu .main-nav__top-level-icon svg {
+        height: 12px; }
+        .header__upper-bottom .header__menu .main-nav__top-level-icon svg path {
+          fill: #FFFFFF; }
+  .header__upper-bottom .header__order-buttons {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: flex-end; }
+  .header__upper-bottom .header__reorder {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #36BECB;
+    padding: 6px 10px;
+    margin-right: 10px; }
+    .header__upper-bottom .header__reorder__icon {
+      display: inline-block; }
+    .header__upper-bottom .header__reorder__text {
+      display: inline-block; }
+  .header__upper-bottom .header__free-shipping {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #F9A400;
+    padding: 6px 10px; }
 
 .header__lower {
-  min-height: 50px;
-  background-color: #125056; }
+  background-color: #125056;
+  padding: 1px 20px 15px; }
+
+.header__lower-inner {
+  text-align: center;
+  color: #FFFFFF; }
+
+.header__percent-off {
+  font-size: 16px; }
+
+.header__promo-code {
+  font-size: 10px; }
+  .header__promo-code .promo-code {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: bold;
+    padding: 3px;
+    margin-right: 5px;
+    border-radius: 2px; }
 
 .cta__inner {
   max-width: 900px;
@@ -28,7 +96,8 @@
   background-color: #FFFFFF;
   max-width: 700px;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  padding: 10px; }
 
 .cta__title {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -207,9 +276,11 @@
     justify-content: center;
     align-content: center;
     align-items: center; }
-    .earn__refer__content img {
-      width: 20px;
+    .earn__refer__content svg {
+      width: 25px !important;
       height: 100%; }
+      .earn__refer__content svg path {
+        fill: #82A5A9; }
   .earn__refer__text {
     display: inline-block;
     width: 400px;
@@ -253,6 +324,13 @@
       justify-content: center;
       align-items: center;
       margin: 0 auto; }
+    .earn .ways-to-earn__list .way-to-earn__icon {
+      width: 60px !important;
+      height: auto; }
+      .earn .ways-to-earn__list .way-to-earn__icon.fa-facebook-f {
+        height: 55px !important; }
+      .earn .ways-to-earn__list .way-to-earn__icon path {
+        fill: #C2D3D6; }
     .earn .ways-to-earn__list .way-to-earn__content {
       font-size: 10px;
       text-transform: uppercase;
@@ -346,5 +424,6 @@ body {
   width: 100%;
   /* min-height: 200px; */ }
 
-ul {
-  padding: 0; }
+ul, p {
+  padding: 0;
+  margin: 0; }

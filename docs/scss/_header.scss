@@ -1,10 +1,4 @@
-@include block('header'){
-  @include child('upper'){
-    min-height: 75px;
-    background-color: $teal-5;
-  }
-  @include child(lower){
-    min-height:50px;
-    background-color: $teal-6;
-  }
-}
+@import "./header-upper";
+@import "./header-lower";
+
+

@@ -56,9 +56,12 @@
       align-content: center;
       align-items: center;
 
-      img{
-        width: 20px;
+      svg{
+        width: 25px !important;
         height: 100%;
+        path{
+          fill: $teal-2;
+        }
       }
     }
 
@@ -123,6 +126,17 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+      }
+      @include child('icon'){
+        width: 60px !important;
+        height: auto;
+
+        &.fa-facebook-f{
+         height: 55px !important;
+        }
+        path{
+          fill:$teal-1;
+        }
       }
       @include child('content'){
         font-size: 10px;

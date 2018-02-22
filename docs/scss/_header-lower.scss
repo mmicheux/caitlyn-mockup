@@ -1,0 +1,29 @@
+@include block('header'){
+  @include child('lower'){
+    background-color: $teal-6;
+    padding: 1px 20px 15px;
+
+  }
+
+  @include child('lower-inner'){
+    text-align: center;
+    color: $white;
+  }
+
+  @include child('percent-off'){
+    font-size: 16px;
+  }
+  @include child('promo-code'){
+    font-size: 10px;
+    .promo-code{
+      background-color: $white;
+      color: $black;
+      font-weight: bold;
+      padding: 3px;
+      margin-right: 5px;
+      border-radius: 2px;
+
+    }
+  }
+
+}
